@@ -13,9 +13,9 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(ResourceNotFoundExceptio.class)
+    @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<Map<String, Object>> handleNotFound(
-            ResourceNotFoundExceptio exception) {
+            ResourceNotFoundException exception) {
         return buildErrorResponse(
                 HttpStatus.NOT_FOUND,
                 exception.getMessage()

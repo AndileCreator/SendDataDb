@@ -41,6 +41,15 @@ public class StudentController {
         );
     }
 
+    //Read by Email
+//    @GetMapping("/email/{email}")
+//    public ResponseEntity<StudentResponse> getStudentByEmail(
+//            @PathVariable String email){
+//        return ResponseEntity.ok(
+//                studentService.getStudentByEmail(email)
+//        );
+//    }
+
     //Read One
     @GetMapping("/{id}")
     public ResponseEntity<StudentResponse> getStudentById(@PathVariable long id) {
